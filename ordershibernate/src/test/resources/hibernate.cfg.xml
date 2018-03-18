@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database Connection Settings -->
+
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/order</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">admin</property>
+        <!-- Connection Pool Size (built-in) -->
+        <property name="connection.pool.size">10</property>
+        <!-- SQL Dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- Disable the second-level cache -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+        <!-- Only validate database structure -->
+        <property name="hbm2ddl.auto">validate</property>
+        <maping class = "soft.dev.hibernare.entity.Customer"/>
+        <maping class = "soft.dev.hibernare.entity.CustomerType"/>
+        <maping class = "soft.dev.hibernare.entity.Adress"/>
+
+    </session-factory>
+</hibernate-configuration>
